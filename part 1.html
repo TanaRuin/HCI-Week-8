@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+ <link rel="stylesheet" href="styles1.css">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <header class="w3-container w3-top w3-cyan w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Image Gallery
+        </span>
+      </header>
+      
+
+      
+      <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+      
+      
+      <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+        
+        
+        <div class="w3-row w3-grayscale-min">
+          <div class="w3-quarter">
+            <img src="nature1.jpeg" style="width:100%" onclick="onClick(this)" alt="nature1" class="nature">
+            <img src="animal2.jpeg" style="width:100%" onclick="onClick(this)" alt="animal2" class="animal">
+            <img src="travel1.avif" style="width:100%" onclick="onClick(this)" alt="travel3" class="travel">
+         </div>
+          
+         <div class="w3-quarter">
+            <img src="animal1.avif" style="width:100%" onclick="onClick(this)" alt="animal1" class="animal">
+            <img src="nature2.jpeg" style="width:100%" onclick="onClick(this)" alt="nature2" class="nature">
+            <img src="city3.jpeg" style="width:100%" onclick="onClick(this)" alt="city3" class="city">
+          </div>
+          
+          <div class="w3-quarter">
+            <img src="capital1.jpeg" style="width:100%" onclick="onClick(this)" alt="capital1" class="city">
+            <img src="travel2.webp" style="width:100%" onclick="onClick(this)" alt="travel2" class="travel">
+            <img src="nature3.avif" style="width:100%" onclick="onClick(this)" alt="nature3" class="nature">
+          </div>
+      
+          <div class="w3-quarter">
+            <img src="animal3.webp" style="width:100%" onclick="onClick(this)" alt="anima3l" class="animal">
+            <img src="city2.jpeg" style="width:100%" onclick="onClick(this)" alt="city1" class="city">
+            <img src="travel3.jpeg" style="width:100%" onclick="onClick(this)" alt="travel2" class="travel">
+          </div>
+        </div>
+       
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+       <script>
+       $(document).ready(function(){
+          $("#nature").click(function(){
+       $(".nature").show();
+       $(".travel,.animal,.city").hide();
+        });
+      $("#travel").click(function(){
+      $(".travel").show();
+      $(".animal,.nature,.city").hide();
+       });
+      $("#animal").click(function(){
+      $(".animal").show();
+      $(".nature,.travel,.city").hide();
+       });
+       $("#city").click(function(){
+      $(".city").show();
+      $(".nature,.travel,.animal").hide();
+       });
+        $("#all").click(function(){
+       $(".nature,.travel,.animal,.city").show();
+       });
+      });     
+      </script>
+         
+        <ul id="menu">
+         <li><a id="all" class="active" href="#">All Images</a></li>
+         <li><a id="nature" href="#">Nature</a></li>
+         <li><a id="animal" href="#">Animals</a></li>
+         <li><a id="city" href="#">City</a></li>
+         <li><a id="travel" href="#">Travel</a></li>
+        </ul>
+      
+
+        <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+          <a class="w3-margin w3-xlarge"  href="main.html">Back to Main Page </a>
+</body>
+</html>

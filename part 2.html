@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Document</title>
+</head>
+    <section>
+     <h2 class="title">FAQs</h2>
+
+     <div class="faq">
+      <div class="question">
+        <h3>What is HTML ? </h3>
+
+        <svg width="25" height="15" viewBox="0 0 42 25">
+            <path d="M3 3L21 21L39 3" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="answer">
+        <p>
+        HTML, which stands for HyperText Markup Language, 
+        is the standard markup language used to create and design documents on the World Wide Web. 
+        It is the fundamental building block of web development and is used to structure content on the internet. 
+        HTML provides a set of elements or tags that are used to define the structure of a web page, such as headings, paragraphs, lists, links, images, forms, and more.   
+        </p>
+
+      </div>
+     </div>
+    </section>
+
+    <section>
+        <div class="faq">
+         <div class="question">
+           <h3>What is CSS ? </h3>
+   
+           <svg width="25" height="15" viewBox="0 0 42 25">
+               <path d="M3 3L21 21L39 3" stroke-width="7" stroke-linecap="round"/>
+           </svg>
+         </div>
+         <div class="answer">
+           <p>
+            CSS, or Cascading Style Sheets, is a style sheet language used for describing the presentation and formatting of a document written in HTML or XML. 
+            While HTML is responsible for structuring the content of a web page, CSS is responsible for styling and layout. 
+            With CSS, you can control the visual aspects of a webpage, such as colors, fonts, spacing, positioning, and more.
+           </p>
+   
+         </div>
+        </div>
+       </section>
+
+       <section>
+        <div class="faq">
+         <div class="question">
+           <h3>What is JQuery ? </h3>
+   
+           <svg width="25" height="15" viewBox="0 0 42 25">
+               <path d="M3 3L21 21L39 3" stroke-width="7" stroke-linecap="round"/>
+           </svg>
+         </div>
+         <div class="answer">
+           <p>
+            jQuery is a fast, lightweight, and feature-rich JavaScript library designed to simplify the client-side scripting of HTML. 
+            It provides a convenient and concise way to traverse and manipulate the Document Object Model (DOM), handle events, create animations, and manage Ajax interactions. 
+           </p>
+   
+         </div>
+        </div>
+       </section>
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+       <script>
+       $(document).ready(function() {
+        const faqs = $(".faq");
+
+        faqs.each(function() {
+            $(this).click(function() {
+                $(this).toggleClass("active");
+            });
+        });
+    });
+        </script>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <a class="w3-margin w3-xlarge"  href="main.html">Back to Main Page </a>
+</body>
+</html>

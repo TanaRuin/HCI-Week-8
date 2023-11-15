@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Dynamic Calculator</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <header class="w3-container w3-top w3-cyan w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Dynamic Calculator
+        </span>
+      </header>
+    <div class="flex-container">
+        <div id="calculator">
+            <h2>Dynamic Calculator</h2>
+        
+            <div>
+              <label for="item1">Item Type 1:</label>
+              <select id="item1">
+                <option value="10">Item A - $10</option>
+                <option value="20">Item B - $20</option>
+                <option value="30">Item C - $30</option>
+              </select>
+              <label for="quantity1">Quantity:</label>
+              <input type="number" id="quantity1" value="1">
+            </div>
+        
+            <div>
+              <label for="item2">Item Type 2:</label>
+              <select id="item2">
+                <option value="15">Item X - $15</option>
+                <option value="25">Item Y - $25</option>
+                <option value="35">Item Z - $35</option>
+              </select>
+              <label for="quantity2">Quantity:</label>
+              <input type="number" id="quantity2" value="1">
+            </div>
+        
+            <div>
+              <label for="total">Total Price:</label>
+              <input type="text" id="total" value="$0.00" disabled>
+            </div>
+          </div>
+        
+          <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+          <script>
+            $(document).ready(function() {
+              function updateTotal() {
+                const quantity1 = parseInt($("#quantity1").val());
+                const itemPrice1 = parseFloat($("#item1").val());
+                const total1 = quantity1 * itemPrice1;
+        
+                const quantity2 = parseInt($("#quantity2").val());
+                const itemPrice2 = parseFloat($("#item2").val());
+                const total2 = quantity2 * itemPrice2;
+        
+                const grandTotal = total1 + total2;
+                $("#total").val("$" + grandTotal.toFixed(2));
+              }
+        
+              $("#quantity1, #item1, #quantity2, #item2").on("input change", updateTotal);
+        
+              updateTotal();
+            });
+          </script>
+        
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <a class="w3-margin w3-xlarge"  href="main.html">Back to Main Page </a>
+</body>
+</html>
